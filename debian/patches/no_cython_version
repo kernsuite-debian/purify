@@ -1,0 +1,13 @@
+Description: remove cython version requirement
+
+--- purify-0.1.orig/cmake_files/python_dependencies.cmake
++++ purify-0.1/cmake_files/python_dependencies.cmake
+@@ -28,7 +28,7 @@ create_environment_script(
+ # Python interpreter + libraries
+ find_package(CoherentPython)
+ # Only required for building
+-lookup_python_package(Cython VERSION 0.21 REQUIRED
++lookup_python_package(Cython REQUIRED
+     PATH "${EXTERNAL_ROOT}/python")
+ # Also required for production
+ find_python_package(numpy)

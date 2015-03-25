@@ -1,0 +1,20 @@
+Source: purify
+Section: science
+Priority: optional
+Maintainer: Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>
+Build-Depends: debhelper (>= 8.0.0), cmake, greatcmakecookoff, libfftw3-dev,
+ libtiff5-dev, libblas-dev, libpython2.7-dev, cython, sopt, libccfits-dev,
+ python-numpy, python-pandas, python-pytest, python-scipy
+Standards-Version: 3.9.4
+Homepage: https://github.com/astro-informatics/purify
+
+Package: purify
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, sopt
+Description: collection of routines for radio interferometric imaging
+ PURIFY is a collection of routines written in C that implements different
+ tools for radio interferometric imaging including file handling (for both
+ visibilities and fits files), implementation of the measurement operator
+ and set-up of the different optimization problems used for image
+ deconvolution. The code calls the generic Sparse OPTimization (SOPT)
+ package to solve the imaging optimization problems.
