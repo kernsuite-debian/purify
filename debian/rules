@@ -20,3 +20,4 @@ override_dh_clean:
 	dh_clean
 	rm -rf data/test/test_dirty.fits
 	rm -rf data/test/test_rec.fits
+	rm -rf .cache
