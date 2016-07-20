@@ -1,4 +1,4 @@
-Source: purify
+Source: basp-purify
 Section: science
 Priority: optional
 Maintainer: Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>
@@ -8,7 +8,7 @@ Build-Depends: debhelper (>= 8.0.0), cmake, greatcmakecookoff, libfftw3-dev,
 Standards-Version: 3.9.4
 Homepage: https://github.com/astro-informatics/purify
 
-Package: purify
+Package: basp-purify
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, sopt
 Description: collection of routines for radio interferometric imaging
