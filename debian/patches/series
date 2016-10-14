@@ -1,1 +1,2 @@
 remove-GreatCMakeCookOff-dependency.patch
+Add-local-Eigen3-include-dir.patch
