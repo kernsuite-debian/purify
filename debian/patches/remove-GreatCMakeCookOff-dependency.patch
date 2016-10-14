@@ -3,19 +3,19 @@ Date: Tue, 11 Oct 2016 08:39:17 +0200
 Subject: remove GreatCMakeCookOff dependency
 
 ---
- CMakeLists.txt                                   |  13 +-
+ CMakeLists.txt                                   |  20 +-
  cmake_files/GreatCMakeCookOff/AddCatchTest.cmake | 112 ++++++++++++
  cmake_files/GreatCMakeCookOff/FindCFitsIO.cmake  |  63 +++++++
  cmake_files/GreatCMakeCookOff/FindFFTW3.cmake    | 224 +++++++++++++++++++++++
  cmake_files/dependencies.cmake                   |  25 +--
  cmake_files/version.cmake                        |   5 +-
- 6 files changed, 413 insertions(+), 29 deletions(-)
+ 6 files changed, 413 insertions(+), 36 deletions(-)
  create mode 100644 cmake_files/GreatCMakeCookOff/AddCatchTest.cmake
  create mode 100644 cmake_files/GreatCMakeCookOff/FindCFitsIO.cmake
  create mode 100644 cmake_files/GreatCMakeCookOff/FindFFTW3.cmake
 
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 4a8aeff..556f7f1 100644
+index 4a8aeff..626a7e4 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -3,14 +3,11 @@ project(Purify C CXX)
@@ -47,6 +47,20 @@ index 4a8aeff..556f7f1 100644
  
  # sets up rpath so libraries can be found
  include(rpath)
+@@ -28,13 +27,6 @@ include(logging)
+ 
+ # include exernal dependencies
+ include(dependencies)
+-if(EXISTS "${EXTERNAL_ROOT}/lib/")
+-    install(DIRECTORY "${EXTERNAL_ROOT}/lib/"
+-        DESTINATION "${LIBRARY_INSTALL_PATH}"
+-        PATTERN "pkgconfig" EXCLUDE
+-        PATTERN "*.a" EXCLUDE
+-    )
+-endif()
+ 
+ if(tests AND data)
+     include(data_dependencies)
 diff --git a/cmake_files/GreatCMakeCookOff/AddCatchTest.cmake b/cmake_files/GreatCMakeCookOff/AddCatchTest.cmake
 new file mode 100644
 index 0000000..177612b
