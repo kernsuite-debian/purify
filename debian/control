@@ -1,17 +1,34 @@
 Source: purify
 Section: science
 Priority: optional
-Maintainer: Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>
-Build-Depends: debhelper (>= 8.0.0), cmake, greatcmakecookoff, libfftw3-dev,
- libtiff5-dev, libblas-dev, libpython2.7-dev, cython, sopt, libccfits-dev,
- python-numpy, python-pandas, python-pytest, python-scipy
-Standards-Version: 3.9.4
-Homepage: https://github.com/basp-group/purify
+Maintainer: Debian Astro Team <debian-astro-maintainers@lists.alioth.debian.org>
+Uploaders: Gijs Molenaar <gijs@pythonic.nl>, Ole Streicher <olebole@debian.org>
+Build-Depends: casacore-dev,
+               cmake,
+               cython,
+               debhelper (>= 9),
+               libblas-dev,
+               libboost-dev,
+               libccfits-dev,
+               libeigen3-dev,
+               libfftw3-dev,
+               libpython2.7-dev,
+               libsopt-dev,
+               libspdlog-dev,
+               libtiff5-dev,
+               python-numpy,
+               python-pandas,
+               python-pytest,
+               python-scipy
+Standards-Version: 3.9.8
+Vcs-Git: https://anonscm.debian.org/git/debian-astro/packages/purify.git
+Vcs-Browser: https://anonscm.debian.org/cgit/debian-astro/packages/purify.git
+Homepage: http://basp-group.github.io/purify/
 
 Package: purify
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, sopt
-Description: collection of routines for radio interferometric imaging
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Collection of routines for radio interferometric imaging
  PURIFY is a collection of routines written in C that implements different
  tools for radio interferometric imaging including file handling (for both
  visibilities and fits files), implementation of the measurement operator

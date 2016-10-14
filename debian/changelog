@@ -1,29 +1,5 @@
-purify (0.1-1kern1) xenial; urgency=medium
+purify (2.0.0-1) UNRELEASED; urgency=medium
 
-  * first kern release
+  * New package. Closes: #830126
 
- -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Wed, 06 Jul 2016 11:30:48 +0000
-
-purify (0.1-4trusty) trusty; urgency=medium
-
-  * add missing sopt dependency
-
- -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Wed, 25 Mar 2015 12:06:04 +0200
-
-purify (0.1-3trusty) trusty; urgency=medium
-
-  * correct python installation path
-
- -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Tue, 24 Mar 2015 10:06:20 +0000
-
-purify (0.1-2trusty) trusty; urgency=medium
-
-  * add missing python-scipy dependency
-
- -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Tue, 24 Mar 2015 09:42:32 +0000
-
-purify (0.1-1trusty) trusty; urgency=low
-
-  * Initial release
-
- -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Tue, 24 Mar 2015 10:41:55 +0200
+ -- Ole Streicher <olebole@debian.org>  Mon, 10 Oct 2016 21:43:33 +0200
