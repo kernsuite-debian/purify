@@ -1,0 +1,9 @@
+The current version of purify needs a patched version of the eigen3
+package. To avoid shipping a whole copy of eigen3 with the sources, the
+orginal header files are copied to the sources during dh_auto_config,
+and then the patch `debian/eigen3_LukePratley.patch` is applied.
+
+It is expected that the patch will merge with the upstream eigen3 at some
+point.
+
+Ole Streicher <olebole@debian.org>
