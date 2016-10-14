@@ -29,6 +29,7 @@ Homepage: http://basp-group.github.io/purify/
 Package: purify
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
+Suggests: libpurify-dev
 Description: Collection of routines for radio interferometric imaging
  PURIFY is a collection of routines written in C that implements different
  tools for radio interferometric imaging including file handling (for both
@@ -36,3 +37,33 @@ Description: Collection of routines for radio interferometric imaging
  and set-up of the different optimization problems used for image
  deconvolution. The code calls the generic Sparse OPTimization (SOPT)
  package to solve the imaging optimization problems.
+
+Package: libpurify2.0
+Architecture: any
+Section: libs
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Routines for radio interferometric imaging (shared lib)
+ PURIFY is a collection of routines written in C that implements different
+ tools for radio interferometric imaging including file handling (for both
+ visibilities and fits files), implementation of the measurement operator
+ and set-up of the different optimization problems used for image
+ deconvolution. The code calls the generic Sparse OPTimization (SOPT)
+ package to solve the imaging optimization problems.
+ .
+ This package contains the shared library.
+
+Package: libpurify-dev
+Architecture: any
+Section: libdevel
+Depends: libpurify2.0 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
+Recommends: purify
+Description: Routines for radio interferometric imaging (development files)
+ PURIFY is a collection of routines written in C that implements different
+ tools for radio interferometric imaging including file handling (for both
+ visibilities and fits files), implementation of the measurement operator
+ and set-up of the different optimization problems used for image
+ deconvolution. The code calls the generic Sparse OPTimization (SOPT)
+ package to solve the imaging optimization problems.
+ .
+ This package contains the development files.
+

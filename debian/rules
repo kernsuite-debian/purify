@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
 
-export DH_VERBOSE=1
+#export DH_VERBOSE=1
 
 %:
 	dh $@ --parallel --buildsystem=cmake --with-python
@@ -10,3 +10,7 @@ override_dh_auto_configure:
 	cp -r /usr/include/eigen3 .
 	cd eigen3 && patch -p1 < ../debian/eigen3_LukePratley.patch
 	dh_auto_configure -- -DPYTHON_PKG_DIR=/usr/lib/python2.7/dist-packages
+
+override_dh_auto_install:
+	dh_auto_install
+	mv debian/tmp/usr/bin/Purify debian/tmp/usr/bin/purify
