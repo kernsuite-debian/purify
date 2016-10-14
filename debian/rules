@@ -14,10 +14,3 @@ override_dh_auto_test:
 	# we disable the tests since one of the tests fail
 	# https://github.com/astro-informatics/purify/issues/46
 	true
-
-
-override_dh_clean:
-	dh_clean
-	rm -rf data/test/test_dirty.fits
-	rm -rf data/test/test_rec.fits
-	rm -rf .cache
