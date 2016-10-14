@@ -1,0 +1,23 @@
+From: Ole Streicher <olebole@debian.org>
+Date: Fri, 14 Oct 2016 22:38:14 +0200
+Subject: Fix SOVERSION and library name
+
+---
+ cpp/purify/CMakeLists.txt | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/cpp/purify/CMakeLists.txt b/cpp/purify/CMakeLists.txt
+index f500225..b28c0f3 100644
+--- a/cpp/purify/CMakeLists.txt
++++ b/cpp/purify/CMakeLists.txt
+@@ -31,7 +31,9 @@ if(TARGET casacore::ms)
+ endif()
+ add_library(libpurify SHARED ${SOURCES})
+ set(version "${Purify_VERSION_MAJOR}.${Purify_VERSION_MINOR}.${Purify_VERSION_PATCH}")
+-set_target_properties(libpurify PROPERTIES VERSION ${version} SOVERSION ${version})
++set_target_properties(libpurify PROPERTIES VERSION ${version}
++  SOVERSION ${Purify_VERSION_MAJOR}.${Purify_VERSION_MINOR}
++  OUTPUT_NAME purify)
+ 
+ target_include_directories(libpurify PUBLIC
+   $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}/include>
