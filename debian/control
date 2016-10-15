@@ -6,21 +6,15 @@ Uploaders: Gijs Molenaar <gijs@pythonic.nl>, Ole Streicher <olebole@debian.org>
 Build-Depends: casacore-dev,
                catch,
                cmake,
-               cython,
                debhelper (>= 9),
                libblas-dev,
                libboost-dev,
                libccfits-dev,
                libeigen3-dev,
                libfftw3-dev,
-               libpython2.7-dev,
                libsopt-dev,
                libspdlog-dev,
-               libtiff5-dev,
-               python-numpy,
-               python-pandas,
-               python-pytest,
-               python-scipy
+               libtiff5-dev
 Standards-Version: 3.9.8
 Vcs-Git: https://anonscm.debian.org/git/debian-astro/packages/purify.git
 Vcs-Browser: https://anonscm.debian.org/cgit/debian-astro/packages/purify.git
