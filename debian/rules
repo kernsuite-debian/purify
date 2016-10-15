@@ -3,13 +3,15 @@
 
 #export DH_VERBOSE=1
 
+CMAKE_FLAGS += -DDEB_BUILD_MULTIARCH=`dpkg-architecture -qDEB_BUILD_MULTIARCH`
+
 %:
 	dh $@ --parallel --buildsystem=cmake --with-python
 
 override_dh_auto_configure:
 	cp -r /usr/include/eigen3 .
 	cd eigen3 && patch -p1 < ../debian/eigen3_LukePratley.patch
-	dh_auto_configure -- -DPYTHON_PKG_DIR=/usr/lib/python2.7/dist-packages
+	dh_auto_configure -- $(CMAKE_FLAGS)
 
 override_dh_auto_install:
 	dh_auto_install

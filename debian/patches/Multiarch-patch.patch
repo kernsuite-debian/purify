@@ -1,0 +1,22 @@
+From: Ole Streicher <olebole@debian.org>
+Date: Sat, 15 Oct 2016 10:45:24 +0200
+Subject: Multiarch patch
+
+---
+ cpp/purify/CMakeLists.txt | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/cpp/purify/CMakeLists.txt b/cpp/purify/CMakeLists.txt
+index b28c0f3..31afe8a 100644
+--- a/cpp/purify/CMakeLists.txt
++++ b/cpp/purify/CMakeLists.txt
+@@ -62,7 +62,7 @@ install(TARGETS libpurify
+   EXPORT PurifyTargets
+   DESTINATION share/cmake/Purify
+   RUNTIME DESTINATION bin
+-  LIBRARY DESTINATION lib
+-  ARCHIVE DESTINATION lib
++  LIBRARY DESTINATION lib/${DEB_BUILD_MULTIARCH}
++  ARCHIVE DESTINATION lib/${DEB_BUILD_MULTIARCH}
+   INCLUDES DESTINATION include
+ )

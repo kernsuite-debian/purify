@@ -1,1 +1,1 @@
-usr/lib/libpurify.so.*
+usr/lib/*/libpurify.so.*
