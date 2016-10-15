@@ -1,6 +1,6 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: purify
-Source: <url://example.com>
+Source: http://www.github.com/basp-group/purify
 
 Files: *
 Copyright: 2013-2016 Rafael Carrillo, Jason McEwen, Yves Wiaux
@@ -431,4 +431,3 @@ Note: This is the original license of Eigen3. The file patches some eigen3
  headers, and the author of the patch confirmed that his patch has the same
  license as the orginal file. It is planned to forward the patch to Eigen3
  for inclusion.
-
