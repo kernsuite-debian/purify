@@ -429,5 +429,5 @@ License: MPL-2
  defined by the Mozilla Public License, v. 2.0.
 Note: This is the original license of Eigen3. The file patches some eigen3
  headers, and the author of the patch confirmed that his patch has the same
- license as the orginal file. It is planned to forward the patch to Eigen3
+ license as the original file. It is planned to forward the patch to Eigen3
  for inclusion.
