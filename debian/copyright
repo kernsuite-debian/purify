@@ -23,7 +23,7 @@ License: GPL-2.0+
  On Debian systems, the complete text of the GNU General
  Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
 
-Files: debian/patches/remove-reference-to-GreatCMakeCookOff.patch
+Files: debian/patches/remove-GreatCMakeCookOff-dependency.patch
 Copyright: 2013 University College London
 License: MIT
  Permission is hereby granted, free of charge, to any person obtaining
