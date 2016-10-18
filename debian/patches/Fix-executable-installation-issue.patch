@@ -1,8 +1,8 @@
 From: Ole Streicher <olebole@debian.org>
 Date: Fri, 14 Oct 2016 21:33:02 +0200
-Subject: Rename the purify binary.
+Subject: Fix executable installation issue
 
-This avoids the following error (which is mysterious to me):
+This avoids the following error:
 
 -- Installing: /build/purify-2.0.0/debian/purify/usr/share/cmake/purify/PurifyTargets-none.cmake
 CMake Error at cpp/cmake_install.cmake:42 (file):
@@ -10,29 +10,20 @@ CMake Error at cpp/cmake_install.cmake:42 (file):
   "/build/purify-2.0.0/obj-x86_64-linux-gnu/cpp//build/purify-2.0.0/obj-x86_64-linux-gnu/purify".
 Call Stack (most recent call first):
   cmake_install.cmake:63 (include)
-
-However, the binary must be renamed back: Purify --> purify in
-debian/purify.install.
-
-A less hackish solution here would be appreciated. Still to be discussed with
-upstream.
 ---
- cpp/CMakeLists.txt | 3 ++-
- 1 file changed, 2 insertions(+), 1 deletion(-)
+ cpp/CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/cpp/CMakeLists.txt b/cpp/CMakeLists.txt
-index 6544533..af406a8 100644
+index 6544533..a0a8569 100644
 --- a/cpp/CMakeLists.txt
 +++ b/cpp/CMakeLists.txt
-@@ -36,9 +36,10 @@ endif()
+@@ -36,7 +36,7 @@ endif()
  if(TARGET casacore::ms)
    add_executable(purify main.cc cmdl.cc AlgorithmUpdate.cc)
    target_link_libraries(purify libpurify)
 -  set_target_properties(purify PROPERTIES OUTPUT_NAME ${PROJECT_BINARY_DIR}/purify)
-+  set_target_properties(purify PROPERTIES OUTPUT_NAME Purify)
++  set_target_properties(purify PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR})
  
    install(TARGETS purify
-+    RENAME purify
      EXPORT PurifyTargets
-     DESTINATION share/cmake/Purify
-     RUNTIME DESTINATION bin

@@ -1,5 +1,5 @@
 remove-GreatCMakeCookOff-dependency.patch
 Add-local-Eigen3-include-dir.patch
-Rename-the-purify-binary.patch
+Fix-executable-installation-issue.patch
 Fix-SOVERSION-and-library-name.patch
 Multiarch-patch.patch
