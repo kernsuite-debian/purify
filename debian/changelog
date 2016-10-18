@@ -1,5 +1,5 @@
-purify (2.0.0-1) UNRELEASED; urgency=medium
+purify (2.0.0-1) unstable; urgency=low
 
   * New package. Closes: #830126
 
- -- Ole Streicher <olebole@debian.org>  Mon, 10 Oct 2016 21:43:33 +0200
+ -- Ole Streicher <olebole@debian.org>  Tue, 18 Oct 2016 11:33:14 +0200
