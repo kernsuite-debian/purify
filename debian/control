@@ -1,4 +1,4 @@
-Source: purify
+Source: basp-purify
 Section: science
 Priority: optional
 Maintainer: Debian Astro Team <debian-astro-maintainers@lists.alioth.debian.org>
@@ -20,7 +20,7 @@ Vcs-Git: https://anonscm.debian.org/git/debian-astro/packages/purify.git
 Vcs-Browser: https://anonscm.debian.org/cgit/debian-astro/packages/purify.git
 Homepage: http://basp-group.github.io/purify/
 
-Package: purify
+Package: basp-purify
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Suggests: libpurify-dev
