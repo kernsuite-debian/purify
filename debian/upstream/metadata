@@ -3,8 +3,8 @@ Bug-Database: https://github.com/basp-group/purify/issues
 Name: purify
 Reference: 
  Author: >
-      Pratley, L. and McEwen, J. D. and d'Avezac, M. and Carrillo, R. E.
-      and Onose, A. and Wiaux, Y.
+      Luke Pratley and Jason D. McEwen and Mayeul d'Avezac and
+      Rafael E. Carrillo and Alexandru Onose and Yves Wiaux
  Title: Robust sparse image reconstruction of radio interferometric observations with PURIFY
  Journal: Mon. Not. Roy. Astron. Soc., submitted
  Year: 2016
