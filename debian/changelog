@@ -1,3 +1,11 @@
+purify (2.0.0-1kern3) xenial; urgency=medium
+
+  * make rebuildable
+  * disable test that takes forever
+  * update signature
+
+ -- KERN packaging <packaging@kernsuite.info>  Tue, 07 Nov 2017 16:11:44 +0200
+
 purify (2.0.0-1kern2) xenial; urgency=medium
 
   * trigger rebuild for casacore 2.2.0
