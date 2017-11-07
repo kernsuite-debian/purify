@@ -1,5 +1,6 @@
-eigen3
+eigen3/
 data/test/test_dirty.fits
 data/test/test_rec.fits
 purify.1
 .cache
+obj-*/
