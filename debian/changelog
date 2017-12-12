@@ -1,3 +1,17 @@
+purify (2.0.0-2) unstable; urgency=medium
+
+  [ Andreas Tille ]
+  * URL should be a link to the publishers site (if possible)
+  * Full bibtex compatible authors list
+  * Publisher provides PDF to point there which is considered more safe
+    than private homepages that might vanish randomly
+
+  [ Ole Streicher ]
+  * spdlog modified API (Closes: #884214)
+  * Push Standards-Version to 4.1.2. Use https in all urls
+
+ -- Ole Streicher <olebole@debian.org>  Tue, 12 Dec 2017 21:07:05 +0100
+
 purify (2.0.0-1) unstable; urgency=low
 
   * New package. Closes: #830126
