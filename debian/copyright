@@ -1,6 +1,6 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: purify
-Source: http://www.github.com/basp-group/purify
+Source: https://www.github.com/basp-group/purify
 
 Files: *
 Copyright: 2013-2016 Rafael Carrillo, Jason McEwen, Yves Wiaux
