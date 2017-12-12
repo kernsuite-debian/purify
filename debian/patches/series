@@ -3,3 +3,4 @@ Add-local-Eigen3-include-dir.patch
 Fix-executable-installation-issue.patch
 Fix-SOVERSION-and-library-name.patch
 Multiarch-patch.patch
+spdlog-modified-API.patch
