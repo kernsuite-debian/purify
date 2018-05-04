@@ -1,3 +1,13 @@
+purify (2.0.0-2kern1) bionic; urgency=medium
+
+  [ Gijs Molenaar ]
+  * repack for kern
+
+  [ Ole Streicher ]
+  * Update VCS fields to use salsa.d.o
+
+ -- KERN packaging <packaging@kernsuite.info>  Fri, 04 May 2018 13:08:27 +0200
+
 purify (2.0.0-2) unstable; urgency=medium
 
   [ Andreas Tille ]
