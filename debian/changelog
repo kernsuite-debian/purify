@@ -1,22 +1,16 @@
-purify (2.0.0-1kern3) xenial; urgency=medium
+purify (2.0.0-2) unstable; urgency=medium
 
-  * make rebuildable
-  * disable test that takes forever
-  * update signature
+  [ Andreas Tille ]
+  * URL should be a link to the publishers site (if possible)
+  * Full bibtex compatible authors list
+  * Publisher provides PDF to point there which is considered more safe
+    than private homepages that might vanish randomly
 
- -- KERN packaging <packaging@kernsuite.info>  Tue, 07 Nov 2017 16:11:44 +0200
+  [ Ole Streicher ]
+  * spdlog modified API (Closes: #884214)
+  * Push Standards-Version to 4.1.2. Use https in all urls
 
-purify (2.0.0-1kern2) xenial; urgency=medium
-
-  * trigger rebuild for casacore 2.2.0
-
- -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Tue, 31 Jan 2017 10:22:32 +0000
-
-purify (2.0.0-1kern1) xenial; urgency=medium
-
-  * repack for kern
-
- -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Tue, 18 Oct 2016 12:13:48 +0200
+ -- Ole Streicher <olebole@debian.org>  Tue, 12 Dec 2017 21:07:05 +0100
 
 purify (2.0.0-1) unstable; urgency=low
 
